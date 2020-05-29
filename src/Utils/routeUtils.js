@@ -1,5 +1,4 @@
 import {FaChrome, FaUser} from 'react-icons/fa';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import Dashboard from '../views/Dashboard';
 import Funcionarios from '../views/Funcionarios';
 import Clientes from '../views/Clientes';

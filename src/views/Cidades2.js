@@ -10,20 +10,18 @@ const Cidades = () =>{
    useEffect(() => {
     dispatch(Creators.ListCidades())
     dispatch(Creators.GetCidades())
-    console.log(cidades)
-   }, []);
-   const handleCreator = ()=>{
-    dispatch(Creators.GetCidades())
-   }
+   }, [dispatch]);
+
     
     return (
       <div>
         <h1 >Cidades </h1>
-        <button onClick={handleCreator}> ha</button>
         <Table striped bordered hover>
           <thead>
+            <tr>
             <th width="10%%">ID</th>
             <th>Nome</th>
+            </tr>
           </thead>
           <tbody>
             {cidades && cidades.map(cidade => (
