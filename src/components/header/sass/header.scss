@@ -1,0 +1,17 @@
+#header {
+    position: sticky;
+    top: 0px;
+
+    .btn-search {
+        color: #9e0000;
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-left: 0px;
+        &:hover{
+            color: #9e000090;
+        }
+        &:focus{
+            box-shadow: 0 0 0 0 rgba(130, 138, 145, 0);
+        }
+    }
+}

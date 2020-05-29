@@ -1,0 +1,73 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 54px;
+  left: 0px;
+  background: #343a4001;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar-category-text {
+  overflow: hidden;
+}
+.sidebar-category-icon {
+  font-size: 1rem;
+}
+.sidebar-category .row.nowrap {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.sidebar:not(:hover) ul {
+  max-width: 3rem;
+}
+.sidebar > ul {
+  position: fixed;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #343a40;
+  z-index: 2;
+  max-width: 15rem;
+  flex-grow: 1;
+  height: calc(100vh - 54px);
+  margin-bottom: 0px;
+  transition: width cubic-bezier(0.4, 0, 1, 1) 0.4s, max-width cubic-bezier(0.4, 0, 1, 1) 0.4s;
+}
+.sidebar ul {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+}
+.sidebar a {
+  display: block;
+  font-size: 1rem;
+  height: 56px;
+  line-height: 56px;
+  border: 1px solid black;
+}
+.sidebar .collapsible > li a.sidebar-category.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.sidebar .collapsible-body a {
+  height: 28px;
+  line-height: 28px;
+  background-color: rgba(95, 93, 93, 0.15);
+  padding-left: 47px;
+  height: 36px;
+  line-height: 36px;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: padding cubic-bezier(0.6, 0.02, 0.42, 1.96) 0.2s;
+}
+.sidebar .collapsible-body a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.sidebar .collapsible a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.8rem;
+  height: 36px;
+  line-height: 36px;
+}
+
+/*# sourceMappingURL=sideBar.css.map */
