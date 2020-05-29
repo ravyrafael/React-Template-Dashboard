@@ -4,11 +4,12 @@ import { Switch, Route, Redirect } from 'react-router';
 import Error404 from './views/Error404';
 import {routes} from './Utils/routeUtils.js'
 
-export default () => {
+export default ({useStyles}) => {
+    console.log(useStyles)
     return (
         <Switch>
             {routes.map(route=>
-                <Route key={route.name} path={route.path} exact component={route.component}></Route>
+                <Route key={route.name} path={route.path} exact component={()=> <route.component useStyles={useStyles}></route.component>}></Route>
             )}
            
             <Route path='/Erro404' exact component={Error404}></Route>

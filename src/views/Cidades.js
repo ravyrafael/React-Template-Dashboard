@@ -3,6 +3,8 @@ import { Table } from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Creators } from '../stores/ducks/cidades'
+import { ResponsiveContainer } from 'recharts';
+
 
 class Cidades extends Component {
   componentWillMount() {
@@ -11,12 +13,15 @@ class Cidades extends Component {
   render() {
     const { cidades } = this.props.cidades
     return (
+      <ResponsiveContainer>
       <div>
         <h1 >Cidades </h1>
         <Table>
           <thead>
-            <th>ID</th>
-            <th>Nome</th>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+            </tr>
           </thead>
           <tbody>
             {cidades.map(cidade => (
@@ -27,6 +32,7 @@ class Cidades extends Component {
           </tbody>
         </Table>
       </div>
+      </ResponsiveContainer>
     );
   }
 }
